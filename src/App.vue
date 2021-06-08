@@ -1,28 +1,48 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Navbar/>
+    <Cart/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from '@/components/common/Navbar'
+import Cart from '@/views/Cart';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Navbar,
+    Cart
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+@font-face {
+  font-family: 'SF Pro Text';
+  src: url("./assets/fonts/SF-Pro-Display-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 500;
+  src: url("./assets/fonts/SF-Pro-Display-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 600;
+  src: url("./assets/fonts/SF-Pro-Display-Semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: 'SF Pro Text';
+  font-weight: 700;
+  src: url("./assets/fonts/SF-Pro-Display-Bold.otf") format("opentype");
+}
+*, *:before, *:after {
+  font-family: 'SF Pro Text', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 </style>
